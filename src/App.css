@@ -32,8 +32,9 @@
 }
 
 /* Display CSS */
-.Display{
-  grid: 3/4;
-}
+
 
 /* Results CSS */
+.Results {
+  grid: 3/4;
+}
