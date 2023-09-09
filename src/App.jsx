@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import './App.css'
 import Form from './components/Form'
 import Results from './components/Results'
 import Nav from './components/Nav'
-import Display from './components/Display'
-import Poster from './components/Poster'
-import './App.css'
+import Help from './components/Help'
+import Purchase from './components/Purchase'
 
 function App() {
 
@@ -29,9 +30,12 @@ function App() {
   return (
     <div className='App'>
       <Nav />
-      <Form found = {findEvent}/>
-      <Results concerts = {concert} />
-      {/* <Display findEvent = {findEvent}/> */}
+      <Routes>
+        <Route path='/' element={<Form check={findEvent}/>}/>
+        <Route path='/searchresults' element={<Results concerts={concert}/>}/>
+        <Route path='/help' element={<Help />}/>
+        <Route path='/checkout' element={<Purchase />}/>
+      </Routes>
     </div>
   )
 }

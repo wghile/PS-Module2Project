@@ -1,28 +1,37 @@
-import { useState, useRef } from "react"
+import { useRef } from "react"
+import { Link } from 'react-router-dom'
 
-export default function Form({found}) {
+export default function Form({check}) {
 
-    // const [data, setData] = useState({artist: '', city: '', startDate: '', endDate: ''})
+    // const [input, setInput] = useState({artist: '', city: ''})
 
-    const artistRef = useRef()
+    const artRef = useRef()
     const cityRef = useRef()
     
     // const update = (e) => {
-    //     setData({...data,[e.target.name]: e.target.value})
+    //     setInput({...,[e.target.name]: e.target.value})
     // }
 
-    const search = (e) => {
+    const submit = (e) => {
         e.preventDefault()
-        found(artistRef.current.value, cityRef.current.value)
-        // evt(data.artist, data.city, data.startDate, data.endDate)
-        // evt(data)
+        check(artRef.current.value, cityRef.current.value)
     }
+
+    // const reset = (e) => {
+    //     e.preventDefault()
+    //     check(artRef, cityRef)
+    // }
 
   return (
     <div className="Form">
-        <input type="text" ref={artistRef} placeholder="Search by Artist"></input>
+        <input type="text" ref={artRef} placeholder="Search by Artist/Genre"></input>
         <input type="text" ref={cityRef} placeholder="Filter by City"></input>
-        <button onClick={search}>Search</button>
+            <button onClick={submit}>
+                <Link to='/searchresults' style={{color: 'black', textDecoration: 'none'}}>
+                    Search
+                </Link>
+            </button>
+        {/* <button onClick={reset}>Clear</button> */}
     </div>
   )
 }
