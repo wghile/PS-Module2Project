@@ -1,12 +1,26 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { Link } from 'react-router-dom'
+
+import ayra from '../images/ayrastarr.png'
+import beyonce from '../images/beyonce.jpeg'
+import brent from '../images/brent.png'
+import daniel from '../images/danielcaesar.png'
+import ed from '../images/edsheeran.png'
+import john from '../images/johnmayer.png'
+import kali from '../images/kaliuchis.png'
+import karol from '../images/karolg.png'
+import sza from '../images/sza.png'
+import tiwa from '../images/tiwa.png'
+import victoria from '../images/victoriamonet.png'
+import wizkid from '../images/wizkid.png'
 
 export default function Form({check}) {
 
-    // const [input, setInput] = useState({artist: '', city: ''})
 
     const artRef = useRef()
     const cityRef = useRef()
+
+    const incRef = useRef()
     
     // const update = (e) => {
     //     setInput({...,[e.target.name]: e.target.value})
@@ -21,16 +35,68 @@ export default function Form({check}) {
     //     e.preventDefault()
     //     check(artRef, cityRef)
     // }
+    
+    const pics = [ayra, beyonce, brent, daniel, wizkid, john, kali, karol, sza, tiwa, victoria, ed]
+
+    const [background, setBackground] = useState(`${pics[0]}`)
+
+    const [incDisplay, setIncDisplay] = useState(true)
+    const [decDisplay, setDecDisplay] = useState(false)
+  
+
+    const switchBackground = () => {
+        // backgrounds.animate([
+        //   {transform: "translateX(100vw)"}
+        // ],
+        //   {
+        //     duration: 2000,
+        //     iterations: infinite
+        // })
+        setBackground(victoria)
+    }
+
+    const decrementIndex = () => {
+        let currentIndex = pics.findIndex((el) => el === background)
+        console.log(currentIndex)
+        setIncDisplay(true)
+        if(currentIndex > 1){
+            setDecDisplay(true)
+            setBackground(pics[currentIndex-1])
+        }else if(currentIndex == 1){
+            setBackground(pics[currentIndex-1])
+            setDecDisplay(false)
+        }
+    }
+   
+    const incrementIndex = () => {
+        let currentIndex = pics.findIndex((el) => el === background)
+        console.log(currentIndex)
+        if(currentIndex + 1 == pics.length - 1){
+            setBackground(pics[currentIndex+1])
+            setIncDisplay(!incDisplay)
+        }else{
+            setBackground(pics[currentIndex+1])
+            setDecDisplay(true)
+        }
+    }
 
   return (
     <div className="Form">
-        <input type="text" ref={artRef} placeholder="Search by Artist/Genre"></input>
-        <input type="text" ref={cityRef} placeholder="Filter by City"></input>
+        <h2 style={{color: 'crimson'}}>Don't Miss An Unforgettable Experience</h2>
+        <div className="inputs">
+            <input type="text" ref={artRef} placeholder="Search by Artist/Genre"></input>
+            <input type="text" ref={cityRef} placeholder="Filter by City"></input>
             <button onClick={submit}>
                 <Link to='/searchresults' style={{color: 'black', textDecoration: 'none'}}>
                     Search
                 </Link>
             </button>
+        </div>
+        <div>
+            {decDisplay && <button onClick={decrementIndex}>back</button>}
+            <img src={background} style={{borderRadius: '10px', width: '400px', height: '250px'}} onClick={switchBackground}/>
+            {incDisplay && <button onClick={incrementIndex}>forward</button>}
+        </div>
         {/* <button onClick={reset}>Clear</button> */}
     </div>
   )

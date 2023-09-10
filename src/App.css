@@ -7,12 +7,13 @@
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: 40px 1fr;
+  grid-template-rows: 1fr 20fr;
+  /* background-image: url('./images/beyonce.jpeg'); */
 }
 
 /* Nav CSS */
 .Nav{
-  grid: 1/2;
+  grid-row: 1/2;
   background-color: darkslategray;
   width: 100vw;
   height: 40px;
@@ -27,8 +28,18 @@
 
 /* Form CSS */
 .Form{
-  grid: 2/3;
+  grid-row: 2/3;
+  width: 100vw;
+  height: 95vh;
+
+  background-color: black;
+  
+  display: grid;
+  grid-template-rows: 1fr 1fr 4fr;
 }
+/* .Form{
+  gri
+} */
 
 /* Display CSS */
 
