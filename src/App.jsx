@@ -6,6 +6,7 @@ import Results from './components/Results'
 import Nav from './components/Nav'
 import Help from './components/Help'
 import Purchase from './components/Purchase'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
         <Route path='/help' element={<Help />}/>
         <Route path='/checkout' element={<Purchase />}/>
       </Routes>
+      <Footer />
     </div>
   )
 }

@@ -6,45 +6,133 @@
 .App{
   height: 100vh;
   width: 100vw;
+  overflow: scroll;
   display: grid;
-  grid-template-rows: 1fr 20fr;
-  /* background-image: url('./images/beyonce.jpeg'); */
+  grid-template-rows: 1fr 20fr 1fr;
 }
 
 /* Nav CSS */
 .Nav{
   grid-row: 1/2;
-  background-color: darkslategray;
+  background-color: rgb(102, 7, 26);
   width: 100vw;
   height: 40px;
+
+  position: fixed;
+  /* display: flex; */
+  /* justify-content: space-around; */
 }
 .Nav > ul{
   display: flex;
-  justify-content: space-between;
-  align-content: center;
+  /* justify-content: space-evenly; */
+  /* align-content: center; */
   height: 40px;
   list-style: none;
+  font-family: Georgia;
+  letter-spacing: 0.02in;
+
 }
 
 /* Form CSS */
 .Form{
   grid-row: 2/3;
-  width: 100vw;
-  height: 95vh;
-
+  /* width: 100vw;
+  height: 100vh; */
   background-color: black;
+  overflow: scroll;
   
   display: grid;
-  grid-template-rows: 1fr 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
 }
-/* .Form{
-  gri
-} */
+.Form > .section1 {
+  grid-row: 1/2;
+}
+.Form > .section1 > h1{
+  position: relative;
+    bottom: 15px;
+  letter-spacing: 0.1in;
+  font-family: Georgia;
+  font-style: italic;
+  color: rgb(102, 7, 26)
+}
+.Form > .section1 > .inputs{
+  margin-left: 20vw;
+  margin-top: 15px;
+}
+.Form > .section1 > .inputs > input{
+  padding: 10px 20px;
+  box-shadow: 0px 0px 10px 5px whitesmoke;
+  border: 3px darkslateblue inset;
+  border-radius: 10px;
+  font-family: Georgia;
+  font-size: 15px;
+}
+.Form > .section1 > .inputs > input:first-child{
+  margin-right: 30px;
+}
+.Form > .section1 > .inputs > button {
+  padding: 10px 20px;
+  margin-left: 30px;
+  border: 3px darkslateblue inset;
+  border-radius: 10px;
+  font-family: Georgia;
+  font-size: 15px;
+  
+  background-color: white;
+  transition: all 300ms ease-in-out;
+}
+.Form > .section1 > .inputs > button:hover{
+  background-color: black;
+  cursor: pointer;
+}
 
-/* Display CSS */
+.Form > .section2{
+  grid-row: 2/3;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./images/festival.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: scroll;
+  background-position: center;
+}
+.Form > .section2 > .images > img{
+  border-radius: 10px;
+  width: 400px;
+  height: 250px;
 
-
+  margin-left: 36vw;
+}
+.Form > .section2 > .images > button{
+  padding: 5px 10px;
+  border: 3px darkslateblue inset;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.Form > .section2 > .images > button:first-child{
+  position: relative;
+    left: 35vw;
+    bottom: 120px;
+}
+.Form > .section2 > .images > button:last-child {
+  position: relative;
+    left: 1vw;
+    bottom: 120px;
+}
 /* Results CSS */
 /* .Results {
   grid: 3/4;
 } */
+
+/* Footer CSS */
+.Footer {
+  grid-row: 3/4;
+  background-color: rgb(102, 7, 26);
+  color: aliceblue;
+  width: 100vw;
+  height: 40px;
+  text-align: center;
+  padding-top: 8px;
+  position: fixed;
+    bottom: 0px;
+}

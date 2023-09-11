@@ -44,16 +44,16 @@ export default function Form({check}) {
     const [decDisplay, setDecDisplay] = useState(false)
   
 
-    const switchBackground = () => {
-        // backgrounds.animate([
-        //   {transform: "translateX(100vw)"}
-        // ],
-        //   {
-        //     duration: 2000,
-        //     iterations: infinite
-        // })
-        setBackground(victoria)
-    }
+    // const switchBackground = () => {
+    //     // backgrounds.animate([
+    //     //   {transform: "translateX(100vw)"}
+    //     // ],
+    //     //   {
+    //     //     duration: 2000,
+    //     //     iterations: infinite
+    //     // })
+    //     setBackground(victoria)
+    // }
 
     const decrementIndex = () => {
         let currentIndex = pics.findIndex((el) => el === background)
@@ -82,20 +82,24 @@ export default function Form({check}) {
 
   return (
     <div className="Form">
-        <h2 style={{color: 'crimson'}}>Don't Miss An Unforgettable Experience</h2>
-        <div className="inputs">
-            <input type="text" ref={artRef} placeholder="Search by Artist/Genre"></input>
-            <input type="text" ref={cityRef} placeholder="Filter by City"></input>
-            <button onClick={submit}>
-                <Link to='/searchresults' style={{color: 'black', textDecoration: 'none'}}>
-                    Search
-                </Link>
-            </button>
+        <div className="section1">
+            <h1>Don't Miss An Unforgettable Experience</h1>
+            <div className="inputs">
+                <input type="text" ref={artRef} placeholder="Search by Artist/Genre"></input>
+                <input type="text" ref={cityRef} placeholder="Filter by City"></input>
+                <button onClick={submit}>
+                    <Link to='/searchresults' style={{color: 'darkslateblue', textDecoration: 'none'}}>
+                        Search
+                    </Link>
+                </button>
+            </div>
         </div>
-        <div>
-            {decDisplay && <button onClick={decrementIndex}>back</button>}
-            <img src={background} style={{borderRadius: '10px', width: '400px', height: '250px'}} onClick={switchBackground}/>
-            {incDisplay && <button onClick={incrementIndex}>forward</button>}
+        <div className="section2">
+            <div className="images">
+                {decDisplay && <button onClick={decrementIndex}>{'<'}</button>}
+                <img src={background} />
+                {incDisplay && <button onClick={incrementIndex}>{'>'}</button>}
+            </div>
         </div>
         {/* <button onClick={reset}>Clear</button> */}
     </div>
