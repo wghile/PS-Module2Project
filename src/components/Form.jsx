@@ -9,7 +9,9 @@ import ed from '../images/edsheeran.png'
 import john from '../images/johnmayer.png'
 import kali from '../images/kaliuchis.png'
 import karol from '../images/karolg.png'
+import shania from '../images/shaniatwain.png'
 import sza from '../images/sza.png'
+import taylor from '../images/taylorswift.png'
 import tiwa from '../images/tiwa.png'
 import victoria from '../images/victoriamonet.png'
 import wizkid from '../images/wizkid.png'
@@ -21,10 +23,6 @@ export default function Form({check}) {
     const cityRef = useRef()
 
     const incRef = useRef()
-    
-    // const update = (e) => {
-    //     setInput({...,[e.target.name]: e.target.value})
-    // }
 
     const submit = (e) => {
         e.preventDefault()
@@ -36,28 +34,16 @@ export default function Form({check}) {
     //     check(artRef, cityRef)
     // }
     
-    const pics = [ayra, beyonce, brent, daniel, wizkid, john, kali, karol, sza, tiwa, victoria, ed]
+    const pics = [ayra, beyonce, brent, shania, daniel, wizkid, john, kali, taylor, karol, sza, tiwa, victoria, ed]
 
     const [background, setBackground] = useState(`${pics[0]}`)
 
     const [incDisplay, setIncDisplay] = useState(true)
     const [decDisplay, setDecDisplay] = useState(false)
-  
-
-    // const switchBackground = () => {
-    //     // backgrounds.animate([
-    //     //   {transform: "translateX(100vw)"}
-    //     // ],
-    //     //   {
-    //     //     duration: 2000,
-    //     //     iterations: infinite
-    //     // })
-    //     setBackground(victoria)
-    // }
 
     const decrementIndex = () => {
         let currentIndex = pics.findIndex((el) => el === background)
-        console.log(currentIndex)
+        // console.log(currentIndex)
         setIncDisplay(true)
         if(currentIndex > 1){
             setDecDisplay(true)
@@ -70,7 +56,7 @@ export default function Form({check}) {
    
     const incrementIndex = () => {
         let currentIndex = pics.findIndex((el) => el === background)
-        console.log(currentIndex)
+        // console.log(currentIndex)
         if(currentIndex + 1 == pics.length - 1){
             setBackground(pics[currentIndex+1])
             setIncDisplay(!incDisplay)

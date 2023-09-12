@@ -24,10 +24,6 @@ function App() {
     }
   }
 
-  // useEffect(() => {
-  //   findEvent('Beyonce','Houston')
-  // }, [])
-
   return (
     <div className='App'>
       <Nav />

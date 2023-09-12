@@ -15,20 +15,21 @@ export default function Results ({concerts}) {
 
   
   if(concertsArray.length > 0){
-    console.log('hi')
+    // console.log('hi')
     return(
       <div className='Results'>
         {concertsArray.map((concert) => {
           return (
             <div key={concert.id}>
-              <Result name = {concert.name} img = {concert.images[0].url} link = {concert.url} date = {`${concert.dates.start.localDate.getFullYear()}-${concert.dates.start.localDate.getMonth() + 1}-${concert.dates.start.localDate.getDate()}`} venue = {concert._embedded.venues[0].name} location = {`${concert._embedded.venues[0].city.name}, ${concert._embedded.venues[0].state?.stateCode}`} />
+              <Result name = {concert.name} img = {concert.images[0].url} link = {concert.url} date = {`${concert.dates.start.localDate.getMonth() + 1}-${concert.dates.start.localDate.getDate()}-${concert.dates.start.localDate.getFullYear()}`} venue = {concert._embedded.venues[0].name} location = {`${concert._embedded.venues[0].city.name}, 
+              ${concert._embedded.venues[0].state?.stateCode ? concert._embedded.venues[0].state?.stateCode:concert._embedded.venues[0].country.name}`} />
             </div>
           )
         })}
       </div>
     )
   }else{
-    console.log('bye')
-    return <h1>No Concert Matches Results</h1>
+    // console.log('bye')
+    return <h1>No Results Found</h1>
   }
 }
