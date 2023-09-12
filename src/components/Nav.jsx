@@ -10,15 +10,15 @@ export default function Nav() {
                 </Link>
             </li>
             <li>
-                <Link to='/checkout' style={{color: 'white', textDecoration: 'none'}}>
-                    Check Out 🛒
-                </Link>
-            </li>
-            <li>
                 <Link to='/help' style={{color: 'white', textDecoration: 'none'}}>
-                    Help
+                    Contact
                 </Link>
             </li>   
+            <li>
+                <Link to='/checkout' style={{color: 'white', textDecoration: 'none', fontSize: '25px'}}>
+                    🛒
+                </Link>
+            </li>
         </ul>
     </div>
   )
