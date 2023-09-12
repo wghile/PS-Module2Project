@@ -4,7 +4,8 @@ Live Site can be accessed here: https://wghile.github.io/PS-Module2Project/
 
 This project was a deliverable for the Per Scholas Software Engineering course. Our objective was to create a web application using React and fetch data using any API of our choosing. My project uses the Ticketmaster API so users can browse for concerts by the artist's name and can filter results by city.
 
-##Technologies
+## Technologies
+
 This project was built using React + Vite, JavaScript, HTMl, and CSS.
 
 ## Instructions
