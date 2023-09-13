@@ -2,7 +2,7 @@ export default function Footer() {
    
   return (
     <div className="Footer">
-      ⓒ In Partnership with <em>ticketmaster</em>
+      ⓒ In Partnership with <em>ticketmaster</em> (jk)
     </div>
   )
 }

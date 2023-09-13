@@ -10,7 +10,9 @@ import Footer from './components/Footer'
 
 function App() {
 
-  const apiKey = process.env.REACT_APP_APIKEY
+  // const apiKey = process.env.REACT_APP_APIKEY
+
+  const apiKey = '8F2mODhfpkcIAxgg5VMGB3Au0Nlf0De9'
 
   const [concert, setConcert] = useState({})
 

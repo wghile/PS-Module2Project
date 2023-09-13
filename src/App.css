@@ -55,14 +55,15 @@
   grid-row: 1/2;
 }
 .Form > .section1 > h1{
-  position: relative;
-    bottom: 15px;
+  /* position: relative;
+    bottom: 15px; */
+  margin-bottom: 40px;
   letter-spacing: 0.1in;
   font-style: italic;
-  color: rgb(102, 7, 26)
+  color: aliceblue;
 }
 .Form > .section1 > .inputs{
-  margin-left: 20vw;
+  margin-left: 25vw;
   margin-top: 15px;
 }
 .Form > .section1 > .inputs > input{
@@ -100,33 +101,41 @@
   overflow: scroll;
   background-position: center;
 }
+.Form > .section2 > button{
+  padding: 5px 10px;
+  border: 2px slateblue inset;
+  border-radius: 10px;
+  font-size: 15px;
+  z-index: 2;
+  position: relative;
+    left: 32.75vw;
+    top: 140px;
+}
+.Form > .section2 > button{
+  cursor: pointer;
+}
+/* .Form > .section2 > .images{
+  z-index: 2;
+} */
 .Form > .section2 > .images > img{
   border-radius: 10px;
   width: 400px;
   height: 250px;
   /* position: static;
-    left: 36vw; */
+    left: 36vw;
+    top: 0px; */
   margin-left: 36vw;
 }
 .Form > .section2 > .images > button{
   padding: 5px 10px;
-  /* height: 250px;
-  width: 50px; */
   border: 2px slateblue inset;
-  /* background-color: rgb(230, 30, 70); */
-  /* opacity: 0.3; */
   border-radius: 10px;
   font-size: 15px;
 }
 .Form > .section2 > .images > button:hover{
   cursor: pointer;
 }
-.Form > .section2 > .images > button:first-child{
-  position: relative;
-    left: 35vw;
-    bottom: 120px;
-}
-.Form > .section2 > .images > button:last-child {
+.Form > .section2 > .images > button{
   position: relative;
     left: 1vw;
     bottom: 120px;
@@ -211,7 +220,7 @@
   height: 700px;
   width: 100vw;
   position: relative;
-    top: 100px;
+    top: 50px;
 }
 .Help > h3, p{
   margin-left: 10vw;
@@ -220,6 +229,47 @@
 .Help > p{
   font-style: italic;
   color: lightslategray;
+  margin-bottom: 10px;
+}
+.Help > div{
+  color: rgb(102, 7, 26);
+  margin-top: 20px;
+  position: relative;
+    left: 145px;
+}
+.Help > div > input{
+  width: 300px;
+  height: 30px;
+}
+.Help > #user-input{
+  height: 250px;
+  width: 50vw;
+  position: relative;
+    top: 50px;
+    left: 145px;
+}
+.Help > button{
+  border: 2px black solid;
+  border-radius: 10px;
+  background-color: rgb(102, 7, 26);
+  color: whitesmoke;
+  transition: all 300ms ease-in-out;
+  padding: 10px 30px;
+  font-size: 15px;
+  position: relative;
+    top: 100px;
+    right: 20vw;
+}
+.Help > button:hover{
+  cursor: pointer;
+  background-color: rgba(102, 7, 26, 0.62);
+}
+
+
+/* Purchase CSS */
+.Purchase{
+  position: relative;
+    top: 25vw;
 }
 
 
