@@ -27,6 +27,7 @@ function App() {
   return (
     <div className='App'>
       <Nav />
+      <Form check = {findEvent}/>
       <Routes>
         <Route path='/PS-Module2Project/' element={<Form check={findEvent}/>}/>
         <Route path='/searchresults' element={<Results concerts={concert}/>}/>
