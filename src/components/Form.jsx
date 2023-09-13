@@ -17,6 +17,22 @@ import tiwa from '../images/tiwa.png'
 import victoria from '../images/victoriamonet.png'
 import wizkid from '../images/wizkid.png'
 
+// import ayra from '../assets/images/ayrastarr.png'
+// import beyonce from '../assets/images/beyonce.jpeg'
+// import brent from '../assets/images/brent.png'
+// import daniel from '../assets/images/danielcaesar.png'
+// import ed from '../assets/images/edsheeran.png'
+// import jazmine from '../assets/images/jazminesullivan.png'
+// import john from '../assets/images/johnmayer.png'
+// import kali from '../assets/images/kaliuchis.png'
+// import karol from '../assets/images/karolg.png'
+// import shania from '../assets/images/shaniatwain.png'
+// import sza from '../assets/images/sza.png'
+// import taylor from '../assets/images/taylorswift.png'
+// import tiwa from '../assets/images/tiwa.png'
+// import victoria from '../assets/images/victoriamonet.png'
+// import wizkid from '../assets/images/wizkid.png'
+
 export default function Form({check}) {
 
 
