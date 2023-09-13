@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 
 function App() {
 
-  const apiKey = '8F2mODhfpkcIAxgg5VMGB3Au0Nlf0De9'
+  const apiKey = process.env.REACT_APP_APIKEY
 
   const [concert, setConcert] = useState({})
 
@@ -27,9 +27,8 @@ function App() {
   return (
     <div className='App'>
       <Nav />
-      <Form check = {findEvent}/>
       <Routes>
-        <Route path='/PS-Module2Project/' element={<Form check={findEvent}/>}/>
+        <Route path='/' element={<Form check={findEvent}/>}/>
         <Route path='/searchresults' element={<Results concerts={concert}/>}/>
         <Route path='/help' element={<Help />}/>
         <Route path='/checkout' element={<Purchase />}/>

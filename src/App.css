@@ -137,6 +137,9 @@
 .App > h1{
   margin-top: 100px;
 }
+.Results > h1{
+  margin-top: 20px;
+}
 .Results > div:first-child > div{
   margin-top: 80px;
 }
@@ -200,6 +203,23 @@
   background-color: whitesmoke;
   border: 2px cadetblue double;
   cursor: pointer;
+}
+
+
+/* Contact */
+.Help{
+  height: 700px;
+  width: 100vw;
+  position: relative;
+    top: 100px;
+}
+.Help > h3, p{
+  margin-left: 10vw;
+  line-height: 0.4in;
+}
+.Help > p{
+  font-style: italic;
+  color: lightslategray;
 }
 
 

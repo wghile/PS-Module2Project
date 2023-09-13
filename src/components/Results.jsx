@@ -18,6 +18,7 @@ export default function Results ({concerts}) {
     // console.log('hi')
     return(
       <div className='Results'>
+        <h1>Results</h1>
         {concertsArray.map((concert) => {
           return (
             <div key={concert.id}>
