@@ -10,6 +10,8 @@ This project was built using React + Vite, JavaScript, HTMl, and CSS.
 
 ## Instructions
 
+Note: When uploading to GitHub pages, I ran into a lot of difficulties. Currently, the application can be accessed using the link but user must first click on 'Home' in the Navigation bar to view the homepage. Still need to work out why component is not rendering..
+
 Users can search for a concert by inputting the artist's name in the input field then selecting the 'Search' button to see all results. Or they can also input the city if they'd like to narrow down the search. If a result exists, the user will be redirected to the results page where they can view all concerts that the artist will be performing in. Additionally, they can purchase tickets if they like, by selecting the 'Buy Ticket' button. This will open in a new tab the ticketmaster link grabbed from the API.
 
 If there are no concerts for that particular artist or that artist in a particular city, the user will see no results.
@@ -30,3 +32,4 @@ If there are no concerts for that particular artist or that artist in a particul
 
 -Thank you to my instructors Tishana Trainor, Manara Ali and Kasper Kain for teaching us the foundation needed to build a React application
 -Special thanks to Manara for showing me optional chaining! Without this, my application would not load the data every time because the component rendering would often happen before the data was retrieved.
+-Thank you to my classmates Mark Soro and Owusuduah Achamfour for their help with deploying to GitHub pages
