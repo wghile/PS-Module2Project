@@ -19,17 +19,23 @@ If there are no concerts for that particular artist or that artist in a particul
 ## Further Improvements
 
 -I'd like to add a sidebar to the results page of concert recommendations to display other concerts that match the genre of the initial search, so fans don't miss out on other performances. (in general, add more styling to Results page)
+
 -Improve the display of performers on the homepage.. I don't like that when the back button is hidden it changes the positioning of the image and forward button. Also, I'd like to have 3 performers displayed at a time and have the buttons be used to bring 1 performer in to view and the other 2 would be half-hidden.
 
 ## Resources:
 
 -MDN for all things
+
 -Date sorting in the Results component: https://forum.freecodecamp.org/t/how-to-format-these-dates-and-sort/453354/2
+
 -Using state to flip through images in Form component: https://www.shecodes.io/athena/17570-how-to-set-a-variable-as-the-source-of-an-image-in-react-js
+
 -Button display toggle in Form component: https://www.shecodes.io/athena/9351-how-to-hide-a-button-in-react#:~:text=To%20hide%20a%20button%20in%20React%2C%20you%20can%20use%20the,class%20in%20your%20button%20element.
 
 ## Acknowledgements:
 
 -Thank you to my instructors Tishana Trainor, Manara Ali and Kasper Kain for teaching us the foundation needed to build a React application
+
 -Special thanks to Manara for showing me optional chaining! Without this, my application would not load the data every time because the component rendering would often happen before the data was retrieved.
+
 -Thank you to my classmates Mark Soro and Owusuduah Achamfour for their help with deploying to GitHub pages
