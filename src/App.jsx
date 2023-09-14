@@ -29,14 +29,14 @@ function App() {
   return (
     <div className='App'>
       <Nav />
-      <HashRouter basename='/PS-Module2Project/'>
+      {/* <HashRouter basename='/PS-Module2Project/'> */}
         <Routes>
           <Route path='/' element={<Form check={findEvent}/>}/>
           <Route path='/searchresults' element={<Results concerts={concert}/>}/>
           <Route path='/help' element={<Help />}/>
           <Route path='/checkout' element={<Purchase />}/>
         </Routes>
-      </HashRouter>
+      {/* </HashRouter> */}
       <Footer />
     </div>
   )
