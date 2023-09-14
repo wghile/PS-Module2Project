@@ -5,7 +5,7 @@ export default function Nav() {
     <div className="Nav">
         <ul>
             <li>
-                <Link to='/home' style={{color: 'white', textDecoration: 'none'}}>
+                <Link to='/' style={{color: 'white', textDecoration: 'none'}}>
                     Home
                 </Link>
             </li>

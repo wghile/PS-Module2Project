@@ -31,7 +31,7 @@ function App() {
       <Nav />
       <Form check={findEvent} />
         <Routes>
-          <Route path='/home' element={<Form check={findEvent}/>}/>
+          <Route path='/'/>
           <Route path='/searchresults' element={<Results concerts={concert}/>}/>
           <Route path='/help' element={<Help />}/>
           <Route path='/checkout' element={<Purchase />}/>
