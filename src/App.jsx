@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Form from './components/Form'
 import Results from './components/Results'
@@ -29,12 +29,14 @@ function App() {
   return (
     <div className='App'>
       <Nav />
-      <Routes>
-        <Route path='/' element={<Form check={findEvent}/>}/>
-        <Route path='/searchresults' element={<Results concerts={concert}/>}/>
-        <Route path='/help' element={<Help />}/>
-        <Route path='/checkout' element={<Purchase />}/>
-      </Routes>
+      <HashRouter basename='/PS-Module2Project/'>
+        <Routes>
+          <Route path='/' element={<Form check={findEvent}/>}/>
+          <Route path='/searchresults' element={<Results concerts={concert}/>}/>
+          <Route path='/help' element={<Help />}/>
+          <Route path='/checkout' element={<Purchase />}/>
+        </Routes>
+      </HashRouter>
       <Footer />
     </div>
   )
