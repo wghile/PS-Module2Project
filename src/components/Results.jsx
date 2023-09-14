@@ -15,7 +15,6 @@ export default function Results ({concerts}) {
 
   
   if(concertsArray.length > 0){
-    // console.log('hi')
     return(
       <div className='Results'>
         <h1>Results</h1>
@@ -30,7 +29,6 @@ export default function Results ({concerts}) {
       </div>
     )
   }else{
-    // console.log('bye')
     return <h1>No Results Found</h1>
   }
 }

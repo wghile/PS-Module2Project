@@ -55,8 +55,6 @@
   grid-row: 1/2;
 }
 .Form > .section1 > h1{
-  /* position: relative;
-    bottom: 15px; */
   margin-bottom: 40px;
   letter-spacing: 0.1in;
   font-style: italic;
@@ -114,16 +112,10 @@
 .Form > .section2 > button{
   cursor: pointer;
 }
-/* .Form > .section2 > .images{
-  z-index: 2;
-} */
 .Form > .section2 > .images > img{
   border-radius: 10px;
   width: 400px;
   height: 250px;
-  /* position: static;
-    left: 36vw;
-    top: 0px; */
   margin-left: 36vw;
 }
 .Form > .section2 > .images > button{
