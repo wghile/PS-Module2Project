@@ -1,4 +1,4 @@
-Live Site can be accessed here: https://wghile.github.io/PS-Module2Project/
+Live Site can be accessed here: https://wghile.github.io/concert-search/
 
 ## About
 
