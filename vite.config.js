@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/PS-Module2Project/',
+  base: '/concert-search/',
   build: {
     outDir: "docs",
   },
