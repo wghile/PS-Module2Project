@@ -5,9 +5,9 @@ export default function Nav() {
     <div className="Nav">
         <ul>
             <li>
-                {/* <Link to='/' style={{color: 'white', textDecoration: 'none'}}> */}
+                <Link to='/concert-search' style={{color: 'white', textDecoration: 'none'}}>
                     Home
-                {/* </Link> */}
+                </Link>
             </li>
             <li>
                 <Link to='/help' style={{color: 'white', textDecoration: 'none'}}>
