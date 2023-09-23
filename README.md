@@ -6,7 +6,7 @@ This project was a deliverable for the Per Scholas Software Engineering course. 
 
 ## Technologies
 
-This project was built using React + Vite, JavaScript, HTMl, and CSS.
+This project was built using React + Vite, JavaScript, HTML, and CSS.
 
 ## How to Navigate
 
