@@ -41,8 +41,6 @@ If there are no concerts for that particular artist or that artist in a particul
 
 -Using state to flip through images in Form component: https://www.shecodes.io/athena/17570-how-to-set-a-variable-as-the-source-of-an-image-in-react-js
 
--Button display toggle in Form component: https://www.shecodes.io/athena/9351-how-to-hide-a-button-in-react#:~:text=To%20hide%20a%20button%20in%20React%2C%20you%20can%20use%20the,class%20in%20your%20button%20element.
-
 -Inputs in Help component: https://react.dev/reference/react-dom/components/input#controlling-an-input-with-a-state-variable
 
 -Environment Variable: https://dev.to/orama254/how-to-use-environment-variables-in-vite-react-template-example-34ff
@@ -53,4 +51,4 @@ If there are no concerts for that particular artist or that artist in a particul
 
 -Special thanks to Manara for showing me optional chaining! Without this, my application would not load the data every time because the component rendering would often happen before the data was retrieved.
 
--Thank you to my classmates Owusuduah Achamfour and Mark Soro for their help with deploying my project to GitHub pages
+-Thank you to my classmates Owusuduah Achamfour and Mark Soro for their help with deploying my project

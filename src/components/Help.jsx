@@ -47,11 +47,11 @@ export default function Help() {
         First Name <br />
         <input id="first-name" type="text" value={firstName} onChange={firstNameChange}></input>
       </div>
-       <div>
+      <div>
         Last Name <br />
         <input id='last-name' type="text" value={lastName} onChange={lastNameChange}></input>
       </div>
-      <textarea id = 'user-input' type="text" value={response} onChange={responseChange}></textarea>
+      <textarea id = 'user-input' type="text" value={response} onChange={responseChange}></textarea> <br />
       <button onClick={submit}>Submit</button>
     </div>
   )

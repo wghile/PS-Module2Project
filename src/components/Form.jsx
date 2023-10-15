@@ -75,7 +75,6 @@ export default function Form({check}) {
             <button id='back-button' onClick={decrementIndex} style={{color: 'slateblue'}}>{'<'}</button>
             <img src={background} />
             <button id='next-button' onClick={incrementIndex} style={{color: 'slateblue'}}>{'>'}</button>
-            {/* </div> */}
         </div>
     </div>
   )
