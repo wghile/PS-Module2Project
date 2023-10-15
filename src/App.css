@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Young+Serif:regular);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
+
 *{
   margin: auto;
   padding: auto;
@@ -120,32 +123,49 @@
 
 
 /* Results CSS */
-.App > h1{
-  margin-top: 100px;
-}
-.Results > h1{
-  margin-top: 20px;
-}
-.Results > div:first-child > div{
-  margin-top: 80px;
-}
 .Results{
-  grid: 2/3;
-  height: 700px;
+  grid-row: 2/3;
+  height: 95vh;
+  width: 100vw;
+  background-color: black;
   overflow: scroll;
-  position: relative;
-    top: 40px;
+
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}
+.Results > #header{
+  grid-row: 1/2;
+  height: 100px;
+
+  display: flex;
+  align-content: baseline;
+}
+.Results > #header > h1{
+  color: aliceblue;
+  font-family: Playfair Display;
+  text-transform: uppercase;
+  letter-spacing: 0.05in;
+  font-size: 45px;
+}
+.Results > #header > h1 > span{
+  font-size: 20px;
+  padding-left: 20px;
+}
+.Results > #results{
+  grid-row: 2/3;
+
+  display: grid;
+  row-gap: 20px;
 }
 
 
 /* Result CSS */
 .Result{
-  position: relative;
-  margin-top: 20px;
   height: 150px;
   width: 850px;
   background-color: aliceblue;
-  border: 5px lightgray double;
+  border: 2px lightgray inset;
+  border-radius: 5px;
 }
 .Result > h1{
   font-size: 17px;
@@ -195,10 +215,10 @@
 
 /* Contact */
 .Help{
-  grid: 2/3;
+  grid-row: 2/3;
   height: 95vh;
   width: 100vw;
-  padding-top: 50px;
+  padding-top: 20px;
   padding-left: 100px;
   overflow: scroll;
 }
@@ -244,9 +264,7 @@
 
 /* Purchase CSS */
 .Purchase{
-  grid: 2/3;
-  position: relative;
-    top: 25vw;
+  grid-row: 2/3;
 }
 
 

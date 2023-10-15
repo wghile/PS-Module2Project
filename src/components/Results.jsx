@@ -17,15 +17,22 @@ export default function Results ({concerts}) {
   if(concertsArray.length > 0){
     return(
       <div className='Results'>
-        <h1>Results</h1>
-        {concertsArray.map((concert) => {
-          return (
-            <div key={concert.id}>
-              <Result name = {concert.name} img = {concert.images[0].url} link = {concert.url} date = {`${concert.dates.start.localDate.getMonth() + 1}-${concert.dates.start.localDate.getDate()}-${concert.dates.start.localDate.getFullYear()}`} venue = {concert._embedded.venues[0].name} location = {`${concert._embedded.venues[0].city.name}, 
-              ${concert._embedded.venues[0].state?.stateCode ? concert._embedded.venues[0].state?.stateCode:concert._embedded.venues[0].country.name}`} />
-            </div>
-          )
-        })}
+        <div id='header'>
+          <h1>
+            Results
+            <span>
+              ( Displaying {concertsArray.length} of {concertsArray.length} )
+            </span>
+          </h1>
+        </div>
+        <div id='results'>
+          {concertsArray.map((concert) => {
+            return (
+                <Result key={concert.id} name = {concert.name} img = {concert.images[0].url} link = {concert.url} date = {`${concert.dates.start.localDate.getMonth() + 1}-${concert.dates.start.localDate.getDate()}-${concert.dates.start.localDate.getFullYear()}`} venue = {concert._embedded.venues[0].name} location = {`${concert._embedded.venues[0].city.name}, 
+                ${concert._embedded.venues[0].state?.stateCode ? concert._embedded.venues[0].state?.stateCode:concert._embedded.venues[0].country.name}`} />
+            )
+          })}
+        </div>
       </div>
     )
   }else{

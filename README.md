@@ -29,9 +29,11 @@ If there are no concerts for that particular artist or that artist in a particul
 
 -I'd like to add a sidebar to the results page of concert recommendations to display other concerts that match the genre of the initial search, so fans don't miss out on other performances. (in general, add more styling to Results page)
 
--Improve the display of performers on the homepage.. I don't like that when the back button is hidden it changes the positioning of the image and forward button. Also, I'd like to have 3 performers displayed at a time and have the buttons be used to bring 1 performer in to view and the other 2 would be half-hidden.
+-Improve the display of performers on the homepage.. I'd like to have 3 performers displayed at a time and have the buttons be used to bring 1 performer in to view and the other 2 would be half-hidden.
 
 -Create a psuedo checkout page that is linked from the Result component when the user clicks 'Buy Tickets' to the Purchase component.
+
+-Limit results to music festivals (I noticed sports events, comedy shows, etc come up)
 
 ## Resources:
 
