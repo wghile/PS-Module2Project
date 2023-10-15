@@ -97,40 +97,47 @@
   background-repeat: no-repeat;
   overflow: scroll;
   background-position: center;
+  padding-top: 20px;
+  
+  display: grid;
+  grid-template-columns: 50px 350px 50px;
+  align-content: baseline;
+  justify-content: center;
 }
 .Form > .section2 > button{
-  padding: 5px 10px;
+  cursor: pointer;
   border: 2px slateblue inset;
   border-radius: 10px;
   font-size: 15px;
-  z-index: 2;
+  padding: 5px 10px;
+}
+.Form > .section2 > #back-button{
+  /* padding: 5px 10px; */
+  /* border: 2px slateblue inset;
+  border: 2px slateblue inset;
+  border-radius: 10px;
+  font-size: 15px; */
+  /* z-index: 2;
   position: relative;
     left: 32.75vw;
-    top: 140px;
+    top: 140px; */
 }
-.Form > .section2 > button{
-  cursor: pointer;
-}
-.Form > .section2 > .images > img{
+.Form > .section2 > img{
   border-radius: 10px;
-  width: 400px;
-  height: 250px;
-  margin-left: 36vw;
+  width: 300px;
+  height: 200px;
 }
-.Form > .section2 > .images > button{
-  padding: 5px 10px;
-  border: 2px slateblue inset;
-  border-radius: 10px;
-  font-size: 15px;
+.Form > .section2 > #next-#button{
+  /* padding: 5px 10px; */
+  /* border: 2px slateblue inset; */
+  /* border-radius: 10px; */
+  /* font-size: 15px; */
 }
-.Form > .section2 > .images > button:hover{
-  cursor: pointer;
-}
-.Form > .section2 > .images > button{
+/* .Form > .section2 > #next-button{
   position: relative;
     left: 1vw;
     bottom: 120px;
-}
+} */
 
 
 /* Results CSS */

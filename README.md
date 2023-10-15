@@ -45,6 +45,8 @@ If there are no concerts for that particular artist or that artist in a particul
 
 -Inputs in Help component: https://react.dev/reference/react-dom/components/input#controlling-an-input-with-a-state-variable
 
+-Environment Variable: https://dev.to/orama254/how-to-use-environment-variables-in-vite-react-template-example-34ff
+
 ## Acknowledgements:
 
 -Thank you to my instructors Tishana Trainor, Manara Ali and Kasper Kain for teaching us the foundation needed to build a React application

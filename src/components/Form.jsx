@@ -19,11 +19,8 @@ import wizkid from '../images/wizkid.png'
 
 export default function Form({check}) {
 
-
     const artRef = useRef()
     const cityRef = useRef()
-
-    const incRef = useRef()
 
     const submit = (e) => {
         e.preventDefault()
@@ -34,32 +31,30 @@ export default function Form({check}) {
 
     const [background, setBackground] = useState(pics[0])
 
-    const [incDisplay, setIncDisplay] = useState(true)
-    const [decDisplay, setDecDisplay] = useState(false)
+    let currentIndex = pics.findIndex((el) => el === background)
 
-    const decrementIndex = () => {
-        let currentIndex = pics.findIndex((el) => el === background)
-        // console.log(currentIndex)
-        setIncDisplay(true)
-        if(currentIndex > 1){
-            setBackground(pics[currentIndex-1])
-            setDecDisplay(true)
-        }else if(currentIndex == 1){
-            setBackground(pics[currentIndex-1])
-            setDecDisplay(false)
-        }
+    //Flipping through images
+    const decrementIndex = (evt) => {
+        evt.preventDefault()
+        setBackground(pics[currentIndex - 1])
     }
-   
-    const incrementIndex = () => {
-        let currentIndex = pics.findIndex((el) => el === background)
-        // console.log(currentIndex)
-        if(currentIndex + 1 == pics.length - 1){
-            setBackground(pics[currentIndex+1])
-            setIncDisplay(false)
-        }else{
-            setBackground(pics[currentIndex+1])
-            setDecDisplay(true)
-        }
+    const incrementIndex = (evt) => {
+        evt.preventDefault()
+        setBackground(pics[currentIndex + 1])
+    }
+
+    //Button Toggle
+    let backButton = document.querySelector('#back-button')
+    let nextButton = document.querySelector('#next-button')
+    if(currentIndex == 0){
+        backButton?.setAttribute('disabled', '')
+    }else{
+        backButton?.removeAttribute('disabled', '')
+    }
+    if(currentIndex == 14){
+        nextButton?.setAttribute('disabled', '')
+    }else{
+        nextButton?.removeAttribute('disabled', '')
     }
 
   return (
@@ -77,13 +72,11 @@ export default function Form({check}) {
             </div>
         </div>
         <div className="section2">
-            {decDisplay && <button onClick={decrementIndex} style={{color: 'slateblue'}}>{'<'}</button>}
-            <div className="images">
-                <img src={background} />
-                {incDisplay && <button onClick={incrementIndex} style={{color: 'slateblue'}}>{'>'}</button>}
-            </div>
+            <button id='back-button' onClick={decrementIndex} style={{color: 'slateblue'}}>{'<'}</button>
+            <img src={background} />
+            <button id='next-button' onClick={incrementIndex} style={{color: 'slateblue'}}>{'>'}</button>
+            {/* </div> */}
         </div>
-        {/* <button onClick={reset}>Clear</button> */}
     </div>
   )
 }
