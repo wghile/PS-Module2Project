@@ -30,9 +30,9 @@ export default function Form({check}) {
     const pics = [ayra, beyonce, brent, shania, daniel, wizkid, john, jazmine, kali, taylor, karol, sza, tiwa, victoria, ed]
 
     const [background, setBackground] = useState(pics[0])
-
+    
     let currentIndex = pics.findIndex((el) => el === background)
-
+    
     //Flipping through images
     const decrementIndex = (evt) => {
         evt.preventDefault()
@@ -42,19 +42,21 @@ export default function Form({check}) {
         evt.preventDefault()
         setBackground(pics[currentIndex + 1])
     }
-
+    
     //Button Toggle
-    let backButton = document.querySelector('#back-button')
-    let nextButton = document.querySelector('#next-button')
-    if(currentIndex == 0){
-        backButton?.setAttribute('disabled', '')
-    }else{
-        backButton?.removeAttribute('disabled', '')
+    const backButtonToggle = () => {
+        if(currentIndex > 0){
+            return false
+        }else{
+            return true
+        }
     }
-    if(currentIndex == 14){
-        nextButton?.setAttribute('disabled', '')
-    }else{
-        nextButton?.removeAttribute('disabled', '')
+    const nextButtonToggle = () => {
+        if(currentIndex === 14){
+            return true
+        }else{
+            return false
+        }
     }
 
   return (
@@ -72,9 +74,9 @@ export default function Form({check}) {
             </div>
         </div>
         <div className="section2">
-            <button id='back-button' onClick={decrementIndex} style={{color: 'slateblue'}}>{'<'}</button>
+            <button id='back-button' onClick={decrementIndex} style={{color: 'slateblue'}} disabled={backButtonToggle()}>{'<'}</button>
             <img src={background} />
-            <button id='next-button' onClick={incrementIndex} style={{color: 'slateblue'}}>{'>'}</button>
+            <button id='next-button' onClick={incrementIndex} style={{color: 'slateblue'}} disabled={nextButtonToggle()}>{'>'}</button>
         </div>
     </div>
   )
