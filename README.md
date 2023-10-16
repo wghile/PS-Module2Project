@@ -47,6 +47,8 @@ If there are no concerts for that particular artist or that artist in a particul
 
 -Environment Variable: https://dev.to/orama254/how-to-use-environment-variables-in-vite-react-template-example-34ff
 
+-Pass props via Links: https://ui.dev/react-router-pass-props-to-link
+
 ## Acknowledgements:
 
 -Thank you to my instructors Tishana Trainor, Manara Ali and Kasper Kain for teaching us the foundation needed to build a React application

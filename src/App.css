@@ -265,6 +265,25 @@
 /* Purchase CSS */
 .Purchase{
   grid-row: 2/3;
+  width: 100vw;
+  height: 90vh;
+  background-color: black;
+  
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-content: center;
+}
+.Purchase > main{
+  grid-column: 1/2;
+  background-color: rgba(176, 196, 222, 0.674);
+  border: 2px outset lightblue;
+  border-radius: 10px;
+  width: 50vw;
+  height: 80vh;
+  padding: 20px;
+}
+.Purchase > aside{
+  grid-column: 2/3;
 }
 
 
