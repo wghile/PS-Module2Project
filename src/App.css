@@ -126,7 +126,7 @@
 /* Results CSS */
 .Results{
   grid-row: 2/3;
-  height: 95vh;
+  height: 89vh;
   width: 100vw;
   background-color: black;
   overflow: scroll;

@@ -31,10 +31,12 @@ export default function Results ({concerts}) {
         <div id='results'>
           {concertsArray.map((concert) => {
 
+          const localTimeTrue = () => {
             let hour = concert.dates.start.localTime.split(':')[0]
             console.log(hour)
             if(hour > 12){
               hour -= 12
+              console.log(hour)
             }
             let min = concert.dates.start.localTime.split(':')[1]
             if(min == 0){
@@ -42,10 +44,29 @@ export default function Results ({concerts}) {
             }else{
               min = `:${min}`
             }
+            return `${hour}${min} PM`
+          }
+          
+          const localTimeFalse = () => {
+            let hour = concert.dates.start.localDate.getHours()
+            console.log(hour)
+            if(hour > 12){
+              hour -= 12
+            }
+            let min = concert.dates.start.localDate.getMinutes()
+            if(min == 0){
+              min = ''
+            }else{
+              min = `:${min}`
+            }
+            return `${hour}${min} PM`
+          }
+          
+          concert.dates.start.localTime ? localTimeTrue() : localTimeFalse()
 
             return (
                 <Result key={concert.id} name = {concert.name} img = {concert.images[0].url} link = {concert.url} date = {`${week[concert.dates.start.localDate.getDay()]} · ${month[concert.dates.start.localDate.getMonth()]} ${concert.dates.start.localDate.getDate()} · ${concert.dates.start.localDate.getFullYear()}`} venue = {concert._embedded.venues[0].name} location = {`${concert._embedded.venues[0].city.name}, 
-                ${concert._embedded.venues[0].state?.stateCode ? concert._embedded.venues[0].state?.stateCode:concert._embedded.venues[0].country.name}`} time={`${hour} ${min} PM`}/>
+                ${concert._embedded.venues[0].state?.stateCode ? concert._embedded.venues[0].state?.stateCode:concert._embedded.venues[0].country.name}`} time={`${concert.dates.start.localTime ? localTimeTrue() : localTimeFalse()}`}/>
             )
           })}
         </div>
