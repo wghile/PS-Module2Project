@@ -287,7 +287,7 @@
   background-color: black;
   
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
   align-content: center;
 }
 .Purchase > main{
@@ -295,9 +295,16 @@
   background-color: rgba(176, 196, 222, 0.674);
   border: 2px outset lightblue;
   border-radius: 10px;
-  width: 50vw;
+  width: 40vw;
   height: 80vh;
   padding: 20px;
+
+  /* display: grid; */
+}
+.Purchase > main > img{
+  width: 400px;
+  border-radius: 20px;
+  border: 2px lightgoldenrodyellow inset;
 }
 .Purchase > aside{
   grid-column: 2/3;

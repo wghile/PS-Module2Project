@@ -49,6 +49,8 @@ If there are no concerts for that particular artist or that artist in a particul
 
 -Pass props via Links: https://ui.dev/react-router-pass-props-to-link
 
+-Day of the week: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay
+
 ## Acknowledgements:
 
 -Thank you to my instructors Tishana Trainor, Manara Ali and Kasper Kain for teaching us the foundation needed to build a React application

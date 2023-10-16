@@ -13,6 +13,9 @@ export default function Results ({concerts}) {
   concertsArray.sort((a,b) => a.dates.start.localDate - b.dates.start.localDate)
   console.log(concertsArray)
 
+  const month = ['Jan', 'Feb', 'March', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+  const week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+
   
   if(concertsArray.length > 0){
     return(
@@ -28,8 +31,8 @@ export default function Results ({concerts}) {
         <div id='results'>
           {concertsArray.map((concert) => {
             return (
-                <Result key={concert.id} name = {concert.name} img = {concert.images[0].url} link = {concert.url} date = {`${concert.dates.start.localDate.getMonth() + 1}-${concert.dates.start.localDate.getDate()}-${concert.dates.start.localDate.getFullYear()}`} venue = {concert._embedded.venues[0].name} location = {`${concert._embedded.venues[0].city.name}, 
-                ${concert._embedded.venues[0].state?.stateCode ? concert._embedded.venues[0].state?.stateCode:concert._embedded.venues[0].country.name}`} />
+                <Result key={concert.id} name = {concert.name} img = {concert.images[0].url} link = {concert.url} date = {`${week[concert.dates.start.localDate.getDay()]} · ${month[concert.dates.start.localDate.getMonth() + 1]} ${concert.dates.start.localDate.getDate()} · ${concert.dates.start.localDate.getFullYear()}`} venue = {concert._embedded.venues[0].name} location = {`${concert._embedded.venues[0].city.name}, 
+                ${concert._embedded.venues[0].state?.stateCode ? concert._embedded.venues[0].state?.stateCode:concert._embedded.venues[0].country.name}`}/>
             )
           })}
         </div>

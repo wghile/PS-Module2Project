@@ -9,26 +9,25 @@ export default function Purchase() {
   const {venue} = location.state
   const {place} = location.state
 
-
   return (
     <div className='Purchase'>
       <main>
+        <img src={img} alt='Concert Img'/>
         <h1>
-          Event: {name}
+          {name}
         </h1>
         <p>
-          {date}
+          🗓️ {date} 
         </p>
         <p>
-          {venue}
-        </p> 
+          {venue}, {place}
+        </p>
         <p>
           {place}
         </p>
-        <img src={img} alt='Concert Img' width='200px'/>
       </main>
       <aside>
-        CheckOut
+        Reserve Tickets Now!
       </aside>
     </div>
   )
