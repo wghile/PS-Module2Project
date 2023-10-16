@@ -36,6 +36,10 @@ export default function Results ({concerts}) {
       </div>
     )
   }else{
-    return <h1>No Results Found</h1>
+    return (
+      <div className='No-Results'>
+        <h1>No Results Found</h1>
+      </div>
+    )
   }
 }

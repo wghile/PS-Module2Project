@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Young+Serif:regular);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Neuton:200,300,regular,italic,700,800);
 
 *{
   margin: auto;
@@ -156,6 +157,22 @@
 
   display: grid;
   row-gap: 20px;
+}
+.No-Results{
+  grid-row: 2/3;
+  height: 90vh;
+  width: 100vw;
+  background-color: black;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding-top: 50px;
+}
+.No-Results > h1{
+  color: rgba(255, 255, 255, 0.687);
+  font-size: 50px;
+  font-family: Neuton;
 }
 
 
