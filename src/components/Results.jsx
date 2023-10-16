@@ -30,9 +30,22 @@ export default function Results ({concerts}) {
         </div>
         <div id='results'>
           {concertsArray.map((concert) => {
+
+            let hour = concert.dates.start.localTime.split(':')[0]
+            console.log(hour)
+            if(hour > 12){
+              hour -= 12
+            }
+            let min = concert.dates.start.localTime.split(':')[1]
+            if(min == 0){
+              min = ''
+            }else{
+              min = `:${min}`
+            }
+
             return (
-                <Result key={concert.id} name = {concert.name} img = {concert.images[0].url} link = {concert.url} date = {`${week[concert.dates.start.localDate.getDay()]} · ${month[concert.dates.start.localDate.getMonth() + 1]} ${concert.dates.start.localDate.getDate()} · ${concert.dates.start.localDate.getFullYear()}`} venue = {concert._embedded.venues[0].name} location = {`${concert._embedded.venues[0].city.name}, 
-                ${concert._embedded.venues[0].state?.stateCode ? concert._embedded.venues[0].state?.stateCode:concert._embedded.venues[0].country.name}`}/>
+                <Result key={concert.id} name = {concert.name} img = {concert.images[0].url} link = {concert.url} date = {`${week[concert.dates.start.localDate.getDay()]} · ${month[concert.dates.start.localDate.getMonth()]} ${concert.dates.start.localDate.getDate()} · ${concert.dates.start.localDate.getFullYear()}`} venue = {concert._embedded.venues[0].name} location = {`${concert._embedded.venues[0].city.name}, 
+                ${concert._embedded.venues[0].state?.stateCode ? concert._embedded.venues[0].state?.stateCode:concert._embedded.venues[0].country.name}`} time={`${hour} ${min} PM`}/>
             )
           })}
         </div>

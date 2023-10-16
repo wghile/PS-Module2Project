@@ -8,6 +8,7 @@ export default function Purchase() {
   const {img} = location.state
   const {venue} = location.state
   const {place} = location.state
+  const {time} = location.state
 
   return (
     <div className='Purchase'>
@@ -17,7 +18,7 @@ export default function Purchase() {
           {name}
         </h1>
         <p>
-          🗓️ {date} 
+          🗓️ {date} · {time}
         </p>
         <p>
           {venue}, {place}
