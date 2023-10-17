@@ -2,15 +2,15 @@ Live Site can be accessed here: https://concert-search.netlify.app
 
 ## About
 
-This project was a deliverable for the Per Scholas Software Engineering course. Our objective was to create a web application using React and fetch data using any API of our choosing. My project uses the Ticketmaster API so users can browse for concerts by the artist's name and can filter results by city.
+This project was a deliverable for the Per Scholas Software Engineering course. Our objective was to create a web application using React and any API of our choosing to fetch data. My project uses the Ticketmaster API so users can browse for concerts by the artist's name and can filter results by city.
 
 ## Technologies
 
-This project was built using React + Vite, JavaScript, HTML, and CSS.
+Built using React + Vite, JavaScript, HTML, and CSS.
 
 ## How to Navigate
 
-Users can search for a concert by inputting the artist's name in the input field then selecting the 'Search' button to see all results. Or they can also input the city if they'd like to narrow down the search. If a result exists, the user will be redirected to the results page where they can view all concerts that the artist will be performing in. Additionally, they can purchase tickets if they like, by selecting the 'Buy Ticket' button. This will open in a new tab the ticketmaster link grabbed from the API.
+Users can search for a concert by inputting the artist's name in the input field then selecting the 'Search' button to see all results. Or they can also input the city if they'd like to narrow down the search. If a result exists, the user will be redirected to the results page where they can view all concerts that the artist will be performing in. Additionally, they can "reserve" tickets if they like, by selecting the 'Buy Ticket' button. This will redirect them to the checkout page (no purchases can be made).
 
 If there are no concerts for that particular artist or that artist in a particular city, the user will see no results.
 
