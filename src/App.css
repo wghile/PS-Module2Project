@@ -286,29 +286,110 @@
   width: 100vw;
   height: 90vh;
   background-color: black;
+  padding: 10px 150px;
   
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-content: center;
+  display: flex;
+  justify-items: center;
+  align-items: flex-start;
+  gap: 40px;
 }
 .Purchase > main{
-  grid-column: 1/2;
+  flex: 1;
+
   background-color: rgba(176, 196, 222, 0.674);
   border: 2px outset lightblue;
   border-radius: 10px;
-  width: 40vw;
-  height: 80vh;
+  width: 10vw;
+  height: 84vh;
   padding: 20px;
 
-  /* display: grid; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
 }
 .Purchase > main > img{
+  flex: 1.2;
   width: 400px;
+  height: 250px;
   border-radius: 20px;
   border: 2px lightgoldenrodyellow inset;
 }
+.Purchase > main > #text{
+  flex: 1;
+}
+.Purchase > main > #text > #title{
+  font-style: italic;
+  font-family: Playfair Display;
+  font-size: 20px;
+  color: rgb(26, 26, 26);
+  letter-spacing: 0.01in;
+}
+.Purchase > main > #text > h1{
+  font-family: Playfair Display;
+  color:beige;
+  -webkit-text-stroke: 1px black;
+  letter-spacing: 0.02in;
+  font-size: 40px;
+  margin: 15px 0px;
+}
+.Purchase > main > #text > #date, #location{
+  font-family: Playfair Display;
+  color: black;
+  letter-spacing: 0.01in;
+  font-size: 18px;
+}
 .Purchase > aside{
+  flex: 1;
+  background-color: rgba(176, 196, 222, 0.674);
+  border: 2px outset lightblue;
+  border-radius: 10px;
+  height: 50vh;
+  margin-bottom: 243px;
+  padding: 20px;
+
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px;
+  row-gap: 20px;
+}
+.Purchase > aside > h1{
+  grid-row: 1/2;
+  font-family: Playfair Display;
+  font-size: 30px;
+  letter-spacing: 0.02in;
+  color: darkslategray;
+}
+.Purchase > aside > div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+.Purchase > aside > div > .text{
+  grid-column: 1/2;
+  font-family: Playfair Display;
+  font-size: 18px;
+}
+.Purchase > aside > div > .numbers{
   grid-column: 2/3;
+
+  width: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+.Purchase > aside > div > .numbers > button{
+  border: none;
+  background: none;
+  font-size: 20px;
+  color: darkslategray;
+}
+.Purchase > aside > div > .numbers > button:disabled{
+  opacity: 0.2;
+}
+.Purchase > aside > div > .numbers > button:hover{
+  cursor: pointer;
+}
+.Purchase > aside > div > .numbers > span{
+  font-size: 20px;
 }
 
 

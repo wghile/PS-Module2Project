@@ -31,8 +31,6 @@ If there are no concerts for that particular artist or that artist in a particul
 
 -Improve the display of performers on the homepage.. I'd like to have 3 performers displayed at a time and have the buttons be used to bring 1 performer in to view and the other 2 would be half-hidden.
 
--Create a psuedo checkout page that is linked from the Result component when the user clicks 'Buy Tickets' to the Purchase component.
-
 -Limit results to music festivals (I noticed sports events, comedy shows, etc come up)
 
 ## Resources:
