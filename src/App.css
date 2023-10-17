@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Young+Serif:regular);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
 @import url(https://fonts.googleapis.com/css?family=Neuton:200,300,regular,italic,700,800);
+@import url(https://fonts.googleapis.com/css?family=Quattrocento:regular,700);
 
 *{
   margin: auto;
@@ -286,7 +286,7 @@
   width: 100vw;
   height: 90vh;
   background-color: black;
-  padding: 10px 150px;
+  padding: 0px 150px;
   
   display: flex;
   justify-items: center;
@@ -295,56 +295,54 @@
 }
 .Purchase > main{
   flex: 1;
-
-  background-color: rgba(176, 196, 222, 0.674);
-  border: 2px outset lightblue;
   border-radius: 10px;
   width: 10vw;
   height: 84vh;
-  padding: 20px;
+  padding: 0px 20px;
+  overflow: scroll;
 
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 20px;
 }
 .Purchase > main > img{
   flex: 1.2;
-  width: 400px;
+  width: 450px;
   height: 250px;
   border-radius: 20px;
-  border: 2px lightgoldenrodyellow inset;
+  border: 2px lightblue inset;
 }
 .Purchase > main > #text{
   flex: 1;
+  width: 450px;
+  padding-left: 20px;
 }
 .Purchase > main > #text > #title{
   font-style: italic;
   font-family: Playfair Display;
   font-size: 20px;
-  color: rgb(26, 26, 26);
+  color: lightsteelblue;
   letter-spacing: 0.01in;
 }
 .Purchase > main > #text > h1{
   font-family: Playfair Display;
-  color:beige;
-  -webkit-text-stroke: 1px black;
+  color: black;
+  -webkit-text-stroke: 1px beige;
   letter-spacing: 0.02in;
   font-size: 40px;
   margin: 15px 0px;
 }
 .Purchase > main > #text > #date, #location{
   font-family: Playfair Display;
-  color: black;
+  color: lightsteelblue;
   letter-spacing: 0.01in;
   font-size: 18px;
 }
 .Purchase > aside{
   flex: 1;
-  background-color: rgba(176, 196, 222, 0.674);
-  border: 2px outset lightblue;
+  align-self: center;
   border-radius: 10px;
   height: 50vh;
-  margin-bottom: 243px;
   padding: 20px;
 
   display: grid;
@@ -356,7 +354,7 @@
   font-family: Playfair Display;
   font-size: 30px;
   letter-spacing: 0.02in;
-  color: darkslategray;
+  color: white;
 }
 .Purchase > aside > div{
   display: grid;
@@ -367,6 +365,7 @@
   grid-column: 1/2;
   font-family: Playfair Display;
   font-size: 18px;
+  color: lightgray;
 }
 .Purchase > aside > div > .numbers{
   grid-column: 2/3;
@@ -381,6 +380,7 @@
   background: none;
   font-size: 20px;
   color: darkslategray;
+  -webkit-text-stroke: 0.2px white;
 }
 .Purchase > aside > div > .numbers > button:disabled{
   opacity: 0.2;
@@ -390,6 +390,22 @@
 }
 .Purchase > aside > div > .numbers > span{
   font-size: 20px;
+  color: white;
+}
+
+.Empty{
+  grid-row: 2/3;
+  width: 100vw;
+  height: 90vh;
+  background-color: black;
+  padding: 10px 150px;
+
+  display: flex;
+}
+.Empty > h1{
+  color: azure;
+  font-family: Quattrocento;
+  font-size: 22px;
 }
 
 

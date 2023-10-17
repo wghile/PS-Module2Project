@@ -65,7 +65,7 @@ export default function Results ({concerts}) {
           concert.dates.start.localTime ? localTimeTrue() : localTimeFalse()
 
             return (
-                <Result key={concert.id} name = {concert.name} img = {concert.images[0].url} link = {concert.url} date = {`${week[concert.dates.start.localDate.getDay()]} · ${month[concert.dates.start.localDate.getMonth()]} ${concert.dates.start.localDate.getDate()} · ${concert.dates.start.localDate.getFullYear()}`} venue = {concert._embedded.venues[0].name} location = {`${concert._embedded.venues[0].city.name}, 
+                <Result key={concert.id} name = {concert.name} img = {concert.images[0].url} date = {`${week[concert.dates.start.localDate.getDay()]} · ${month[concert.dates.start.localDate.getMonth()]} ${concert.dates.start.localDate.getDate()} · ${concert.dates.start.localDate.getFullYear()}`} venue = {concert._embedded.venues[0].name} location = {`${concert._embedded.venues[0].city.name}, 
                 ${concert._embedded.venues[0].state?.stateCode ? concert._embedded.venues[0].state?.stateCode:concert._embedded.venues[0].country.name}`} time={`${concert.dates.start.localTime ? localTimeTrue() : localTimeFalse()}`}/>
             )
           })}

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export default function Result({name, venue, img, link, date, location, time}) {
+export default function Result({name, venue, img, date, location, time}) {
 
   return (
         <div className="Result">

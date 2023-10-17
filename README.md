@@ -27,7 +27,7 @@ If there are no concerts for that particular artist or that artist in a particul
 
 ## Further Improvements
 
--I'd like to add a sidebar to the results page of concert recommendations to display other concerts that match the genre of the initial search, so fans don't miss out on other performances. (in general, add more styling to Results page)
+-I'd like to add a sidebar to the results page of concert recommendations to display other concerts that match the genre of the initial search, so fans don't miss out on other performances.
 
 -Improve the display of performers on the homepage.. I'd like to have 3 performers displayed at a time and have the buttons be used to bring 1 performer in to view and the other 2 would be half-hidden.
 
